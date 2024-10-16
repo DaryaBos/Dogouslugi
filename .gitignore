@@ -13,7 +13,6 @@ frontend/yarn-error.log
 frontend/package-lock.json
 
 # IDEs and editors
-.idea/
 .project
 .classpath
 .c9/
