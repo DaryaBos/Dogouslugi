@@ -1,0 +1,36 @@
+<section class="container dogs-list">
+  @if (loading) {
+    <app-throbber></app-throbber>
+  } @else {
+    @if (dogsList?.length) {
+      <h3>Зарегистрированные собачки:</h3>
+    }
+    <div class="grid-row mt-32">
+      @for (dog of dogsList; track $index) {
+        <div class="dog shadow-block col-2 col-lg-6">
+          <div class="flex-container align-items-center">
+            <img [src]="'../../../assets/png/dogs/' + dog.sex + '.png'" class="image {{dog.sex}}">
+            <div>
+              <h5>{{dog.name}}</h5>
+              <p class="mt-4 sex">{{getSex(dog.sex)}}</p>
+            </div>
+          </div>
+          <p class="mt-16"><span class="breed">Порода:</span> {{getBreed(dog.breed)}}</p>
+          <button class="custom" (click)="deleteDog(dog.id)">
+            <img src="../../../assets/svg/icons/delete.svg">
+          </button>
+        </div>
+      } @empty {
+        <div class="not-have-dog col-2 col-lg-12">
+          <img src="../../../assets/png/dogs/corgi6.png" class="image">
+          <h3>Упс...</h3>
+          <p class="text">У вас нет ни одной  собачки, нажмите кнопку "Добавить"</p>
+        </div>
+      }
+    </div>
+
+    <div class="button-wrapper">
+      <button (click)="addDog()">Добавить</button>
+    </div>
+  }
+</section>

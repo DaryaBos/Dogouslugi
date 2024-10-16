@@ -1,0 +1,34 @@
+.page-wrapper {
+  margin-top: 48px;
+  max-width: 800px;
+
+  .order-wrapper {
+    margin-top: 32px;
+
+    .order {
+
+      .icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 24px;
+      }
+
+      + .order {
+        margin-top: 24px;
+      }
+    }
+
+    .not-have-dog {
+      text-align: center;
+
+      .image {
+        max-width: 150px;
+        margin-bottom: 24px;
+      }
+
+      .text {
+        margin-top: 12px;
+      }
+    }
+  }
+}

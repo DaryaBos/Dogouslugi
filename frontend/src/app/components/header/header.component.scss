@@ -1,0 +1,26 @@
+header {
+  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0 3px 2px #9daccf14;
+  position: relative;
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      .beige {
+        color: #ffa500;
+      }
+
+      .brown {
+        color: #8B4513;
+      }
+    }
+
+    .dogs {
+      margin-right: 24px;
+    }
+  }
+}
